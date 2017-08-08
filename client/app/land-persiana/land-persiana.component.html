@@ -1,0 +1,31 @@
+<div class="col-xs-12 col-md-4 col-md-offset-{{offset}} persiana">
+	<div class="card card-persiana">
+		<div class="header header-primary text-center">
+			<h3>{{nombre.charAt(0).toUpperCase() + nombre.slice(1)}}</h3>
+		</div>
+		<div class="content">
+			<div class="card card-raised card-carousel">
+				<div id="carousel-persiana-{{nombre}}" class="carousel slide" data-ride="carousel">
+					<div class="carousel slide" data-ride="carousel">
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner">
+							<div *ngFor="let image of images; let i = index" class="item" [class.active]="((i ==  0) ? true : false)" >
+								<img [src]="image" />
+							</div>
+						</div>
+						<!-- Controls -->
+						<a class="left carousel-control" [attr.href]="'#carousel-persiana-' + nombre" data-slide="prev">
+							<i class="material-icons">keyboard_arrow_left</i>
+						</a>
+						<a class="right carousel-control" [attr.href]="'#carousel-persiana-' + nombre" data-slide="next">
+							<i class="material-icons">keyboard_arrow_right</i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer text-center">
+			<button class="btn btn-simple btn-primary btn-lg" (click)="emitirNombre()" data-toggle="modal" data-target="#myModal">Ver Mas</button>
+		</div>
+	</div>
+</div>
