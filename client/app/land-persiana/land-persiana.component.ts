@@ -1,27 +1,43 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { PersianaService } from '../services/persiana.service';
 
 // Component decorator
 @Component({
-  selector: 'land-persiana',
-  templateUrl: './land-persiana.component.html',
-  styleUrls: ['./land-persiana.component.css']
+  selector: 'land-page',
+  templateUrl: './land-page.component.html',
+  styleUrls: ['./land-page.component.css']
 })
 
 // Any method defined here is accesible by the template
-export class LandPersianaComponent implements OnInit {
-    @Input() persiana: any;
-    @Input() offset: number;
-    @Output() cambioPersiana = new EventEmitter();
-    
+export class LandPageComponent implements OnInit {
+    persiana;
+    persianas = [];
+
+    offset(index){
+      var offset = this.persianas.length % 3;
+      if(index === this.persianas.length - offset){
+        return 4 / offset;
+      }else{
+        return 0;
+      }
+    }
+    openDialog(persiana){
+      this.persiana = persiana;
+    };
     // In the constructor is defined dependency injection
-    constructor(){ }
+    constructor(private persianaService: PersianaService){ }
+
     // Everything in this method would run at init
-    ngOnInit(){ 
-      console.log(this.persiana);
+    ngOnInit(){
+      this.getPersianas();
+      
     }
 
-    emitirPersiana(){
-      this.cambioPersiana.emit(this.persiana);
-    };
+    getPersianas() {
+      this.persianaService.getPersianas().subscribe(
+        console.log(this.persianas),
+        data => this.persianas = data,
+        error => console.log(error)
+      );
+    }
 }
