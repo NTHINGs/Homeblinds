@@ -13,6 +13,8 @@ export class LandPageComponent implements OnInit {
     persiana;
     persianas = [];
 
+    persianaLoaded = false;
+
     offset(index){
       var offset = this.persianas.length % 3;
       if(index === this.persianas.length - offset){
@@ -37,6 +39,7 @@ export class LandPageComponent implements OnInit {
       this.persianaService.getPersianas().subscribe(
         data => {
           this.persianas = data;
+          this.persianaLoaded = true;
           console.log(this.persianas);
         },
         error => console.log(error)
