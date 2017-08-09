@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Http } from '@angular/http';
-
 import { PersianaService } from './services/persiana.service';
 
 // Component decorator
@@ -27,8 +25,7 @@ export class LandPageComponent implements OnInit {
       this.persiana = persiana;
     };
     // In the constructor is defined dependency injection
-    constructor(private persianaService: PersianaService,
-                private http: Http){ }
+    constructor(private persianaService: PersianaService){ }
 
     // Everything in this method would run at init
     ngOnInit(){
