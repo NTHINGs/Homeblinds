@@ -14,5 +14,7 @@ export class ItemComponent implements OnInit {
     // In the constructor is defined dependency injection
     constructor(){ }
     // Everything in this method would run at init
-    ngOnInit(){ }
+    ngOnInit(){ 
+      console.log(this.persiana);
+    }
 }
