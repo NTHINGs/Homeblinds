@@ -9,8 +9,8 @@ import { Component, OnInit, Input } from '@angular/core';
 
 // Any method defined here is accesible by the template
 export class ItemComponent implements OnInit {
-    @Input() persiana: any;
-    
+    @Input() persiana: Object;
+
     // In the constructor is defined dependency injection
     constructor(){ }
     // Everything in this method would run at init
