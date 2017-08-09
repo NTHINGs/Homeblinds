@@ -24,7 +24,7 @@
 	                <h1>Nuestros Modelos</h1>
 				</div>
 				<div class="space-70"></div>
-				<div *ngIf="persiana" class="row">
+				<div *ngIf="persianaLoaded" class="row">
 					<land-persiana *ngFor="let persiana of persianas; let i = index" [persiana]="persiana" [offset]="offset(i)" (cambioPersiana)="openDialog($event)"></land-persiana>
 				</div>
 	    	</div>
@@ -51,7 +51,7 @@
 	</div>
 	<!-- End Main Page Raised (fondo blanco) -->
 </div>
-<div *ngIf="persiana">	
+<div *ngIf="persianaLoaded">	
 	<item [persiana]="persiana"></item>
 </div>
 
