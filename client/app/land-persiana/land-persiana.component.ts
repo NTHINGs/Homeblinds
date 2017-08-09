@@ -18,7 +18,7 @@ export class LandPersianaComponent implements OnInit {
     constructor(){ }
     // Everything in this method would run at init
     ngOnInit(){ 
-      
+      this.persiana = {};
     }
 
     emitirPersiana(){
