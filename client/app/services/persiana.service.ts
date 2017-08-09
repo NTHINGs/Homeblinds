@@ -14,6 +14,7 @@ export class PersianaService {
 
   getPersianas(): Observable<any> {
     // return this.http.get('/api/persianas').map(res => res.json());
+    console.log(typeof(this.http.get('/api/persianas').map(res => res.json())));
     return [
       {
         name:"enrollable", 
