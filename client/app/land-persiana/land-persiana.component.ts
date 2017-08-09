@@ -21,7 +21,7 @@ export class LandPersianaComponent implements OnInit {
       
     }
 
-    emitirNombre(){
+    emitirPersiana(){
       this.cambioPersiana.emit(this.persiana);
     };
 }
