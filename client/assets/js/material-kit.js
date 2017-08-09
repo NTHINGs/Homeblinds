@@ -72,24 +72,27 @@ materialKit = {
 
     initSliders: function(){
         // Sliders for demo purpose
-        console.log($('#sliderRegular'));
-        $('#sliderRegular').noUiSlider({
-            start: 40,
-            connect: "lower",
-            range: {
-                min: 0,
-                max: 100
-            }
-        });
-
-        $('#sliderDouble').noUiSlider({
-            start: [20, 60] ,
-            connect: true,
-            range: {
-                min: 0,
-                max: 100
-            }
-        });
+        if($('#sliderRegular').length){
+            $('#sliderRegular').noUiSlider({
+                start: 40,
+                connect: "lower",
+                range: {
+                    min: 0,
+                    max: 100
+                }
+            });
+        }
+        
+        if($('#sliderDouble').length){
+            $('#sliderDouble').noUiSlider({
+                start: [20, 60] ,
+                connect: true,
+                range: {
+                    min: 0,
+                    max: 100
+                }
+            });
+        }
     }
 }
 
