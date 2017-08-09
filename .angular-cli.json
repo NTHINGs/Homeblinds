@@ -27,6 +27,7 @@
         "../node_modules/jquery/dist/jquery.min.js",
         "../node_modules/tether/dist/js/tether.min.js",
         "../node_modules/bootstrap/dist/js/bootstrap.js",
+        "../node_modules/core-js/client/shim.min.js",
         "assets/js/material.min.js",
         "assets/js/nouislider.min.js",
         "assets/js/bootstrap-datepicker.js",
@@ -60,7 +61,8 @@
       "scripts": [
         "../node_modules/jquery/dist/jquery.min.js",
         "../node_modules/tether/dist/js/tether.min.js",
-        "../node_modules/bootstrap/dist/js/bootstrap.js"
+        "../node_modules/bootstrap/dist/js/bootstrap.js",
+        "../node_modules/core-js/client/shim.min.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
