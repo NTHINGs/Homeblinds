@@ -25,7 +25,7 @@
 				</div>
 				<div class="space-70"></div>
 				<div *ngIf="persiana" class="row">
-					<land-persiana *ngFor="let persiana of persianas; let i = index" [persiana]="persiana | async" [offset]="offset(i)" (cambioPersiana)="openDialog($event)"></land-persiana>
+					<land-persiana *ngFor="let persiana of persianas; let i = index" [persiana]="persiana" [offset]="offset(i)" (cambioPersiana)="openDialog($event)"></land-persiana>
 				</div>
 	    	</div>
 		</div>
@@ -53,5 +53,5 @@
 </div>
 
 <div *ngIf="persiana">
-   <item [persiana]="persiana | async"></item>
+   <item [persiana]="persiana"></item>
 </div>
