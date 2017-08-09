@@ -16,7 +16,7 @@
 									<div class="carousel slide" data-ride="carousel">
 										<!-- Wrapper for slides -->
 										<div class="carousel-inner">
-											<div *ngFor="let foto persiana.galeria; let i = index" class="item" [class.active]="((i ==  0) ? true : false)" >
+											<div *ngFor="let foto in persiana.galeria; let i = index" class="item" [class.active]="((i ==  0) ? true : false)" >
 												<img [src]="foto.foto" />
 											</div>
 										</div>
