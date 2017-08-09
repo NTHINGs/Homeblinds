@@ -5,6 +5,7 @@
   },
   "apps": [
     {
+      "name": "client",
       "root": "client",
       "outDir": "dist/public",
       "assets": [
@@ -41,6 +42,7 @@
       }
     },
     {
+      "name": "admin",
       "root": "admin",
       "outDir": "dist/admin",
       "assets": [
