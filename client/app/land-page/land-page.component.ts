@@ -35,8 +35,10 @@ export class LandPageComponent implements OnInit {
 
     getPersianas() {
       this.persianaService.getPersianas().subscribe(
-        console.log(this.persianas),
-        data => this.persianas = data,
+        data => {
+          this.persianas = data;
+          console.log(this.persianas);
+        },
         error => console.log(error)
       );
     }
