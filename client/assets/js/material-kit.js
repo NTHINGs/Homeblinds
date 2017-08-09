@@ -72,6 +72,7 @@ materialKit = {
 
     initSliders: function(){
         // Sliders for demo purpose
+        console.log($('#sliderRegular'));
         $('#sliderRegular').noUiSlider({
             start: 40,
             connect: "lower",
