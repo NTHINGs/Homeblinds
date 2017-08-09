@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Http } from '@angular/http';
+
+import { PersianaService } from './services/persiana.service';
 
 // Component decorator
 @Component({
@@ -9,14 +12,8 @@ import { Component, OnInit } from '@angular/core';
 
 // Any method defined here is accesible by the template
 export class LandPageComponent implements OnInit {
-    nombre = "";
-    persianas = [
-      "enrollable",
-      "sheer",
-			"vertical",
-      "romana",
-			"pvc"
-    ];
+    persiana = {};
+    persianas = [];
 
     offset(index){
       var offset = this.persianas.length % 3;
@@ -26,14 +23,22 @@ export class LandPageComponent implements OnInit {
         return 0;
       }
     }
-    openDialog(nombre){
-      this.nombre = nombre;
+    openDialog(persiana){
+      this.persiana = persiana;
     };
     // In the constructor is defined dependency injection
-    constructor(){ }
+    constructor(private persianaService: PersianaService,
+                private http: Http){ }
 
     // Everything in this method would run at init
     ngOnInit(){
+      this.getPersianas();
+    }
 
+    getPersianas() {
+      this.persianaService.getPersianas().subscribe(
+        data => this.persianas = data,
+        error => console.log(error)
+      );
     }
 }
