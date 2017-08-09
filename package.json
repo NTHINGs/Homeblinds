@@ -12,7 +12,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --target=development --environment=dev && tsc -p server"
+    "postinstall": "ng build --app client --target=development --environment=dev && ng build --app admin --target=development --environment=dev && tsc -p server"
   },
   "private": true,
   "dependencies": {
