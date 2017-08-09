@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PersianaService } from './services/persiana.service';
+import { PersianaService } from '../services/persiana.service';
 
 // Component decorator
 @Component({
