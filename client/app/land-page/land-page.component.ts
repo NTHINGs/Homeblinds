@@ -14,6 +14,7 @@ export class LandPageComponent implements OnInit {
     persianas = [];
 
     persianaLoaded = false;
+    persianaSelected = false;
 
     offset(index){
       var offset = this.persianas.length % 3;
@@ -25,6 +26,7 @@ export class LandPageComponent implements OnInit {
     }
     openDialog(persiana){
       this.persiana = persiana;
+      this.persianaSelected = true;
     };
     // In the constructor is defined dependency injection
     constructor(private persianaService: PersianaService){ }
