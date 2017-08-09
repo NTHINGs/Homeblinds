@@ -17,9 +17,7 @@ export class LandPersianaComponent implements OnInit {
     // In the constructor is defined dependency injection
     constructor(){ }
     // Everything in this method would run at init
-    ngOnInit(){ 
-      this.persiana = {};
-    }
+    ngOnInit(){ }
 
     emitirPersiana(){
       this.cambioPersiana.emit(this.persiana);
