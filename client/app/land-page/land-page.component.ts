@@ -30,11 +30,12 @@ export class LandPageComponent implements OnInit {
     // Everything in this method would run at init
     ngOnInit(){
       this.getPersianas();
-      console.log(this.persianas);
+      
     }
 
     getPersianas() {
       this.persianaService.getPersianas().subscribe(
+        console.log(this.persianas),
         data => this.persianas = data,
         error => console.log(error)
       );
