@@ -13,15 +13,7 @@ export class PersianaService {
   constructor(private http: Http) { }
 
   getPersianas(): Observable<any> {
-    // return this.http.get('/api/persianas').map(res => res.json());
-    console.log(typeof(this.http.get('/api/persianas').map(res => res.json())));
-    return [
-      {
-        name:"enrollable", 
-        descripcion:"Esto es una prueba", 
-        galeria: [{foto: "../assets/img/bg2.jpeg"}, {foto: "../assets/img/bg3.jpeg"}, {foto: "../assets/img/bg4.jpeg"}]
-      }
-    ];
+    return this.http.get('/api/persianas').map(res => res.json());
   }
 
   countPersianas(): Observable<any> {
