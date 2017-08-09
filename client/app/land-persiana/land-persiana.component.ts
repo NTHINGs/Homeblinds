@@ -10,7 +10,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 // Any method defined here is accesible by the template
 export class LandPersianaComponent implements OnInit {
-    @Input() persiana: any;
+    @Input() persiana: Object;
     @Input() offset: number;
     @Output() cambioPersiana = new EventEmitter();
     
