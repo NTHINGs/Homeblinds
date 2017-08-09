@@ -1,24 +1,24 @@
 import * as express from 'express';
 
-import CatCtrl from './controllers/cat';
+import PersianaCtrl from './controllers/persiana';
 import UserCtrl from './controllers/user';
-import Cat from './models/cat';
+import Persiana from './models/persiana';
 import User from './models/user';
 
 export default function setRoutes(app) {
 
   const router = express.Router();
 
-  const catCtrl = new CatCtrl();
+  const persianaCtrl = new PersianaCtrl();
   const userCtrl = new UserCtrl();
 
-  // Cats
-  router.route('/cats').get(catCtrl.getAll);
-  router.route('/cats/count').get(catCtrl.count);
-  router.route('/cat').post(catCtrl.insert);
-  router.route('/cat/:id').get(catCtrl.get);
-  router.route('/cat/:id').put(catCtrl.update);
-  router.route('/cat/:id').delete(catCtrl.delete);
+  // Persianas
+  router.route('/persianas').get(persianaCtrl.getAll);
+  router.route('/persianas/count').get(persianaCtrl.count);
+  router.route('/persiana').post(persianaCtrl.insert);
+  router.route('/persiana/:id').get(persianaCtrl.get);
+  router.route('/persiana/:id').put(persianaCtrl.update);
+  router.route('/persiana/:id').delete(persianaCtrl.delete);
 
   // Users
   router.route('/login').post(userCtrl.login);
