@@ -10,7 +10,7 @@ import { PersianaService } from '../services/persiana.service';
 
 // Any method defined here is accesible by the template
 export class LandPageComponent implements OnInit {
-    persiana = {};
+    persiana;
     persianas = [];
 
     offset(index){
