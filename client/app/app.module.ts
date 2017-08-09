@@ -6,7 +6,9 @@ import { AppComponent } from './app.component';
 import { LandPageComponent } from './land-page/land-page.component';
 import { LandPersianaComponent } from './land-persiana/land-persiana.component';
 import { ItemComponent } from './item/item.component';
-;
+
+import { PersianaService } from './services/persiana.service';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { ItemComponent } from './item/item.component';
     BrowserModule,
     Ng2PageScrollModule
   ],
-  providers: [],
+  providers: [
+    PersianaService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
