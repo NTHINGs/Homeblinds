@@ -4,10 +4,18 @@ abstract class BaseCtrl {
 
   // Get all
   getAll = (req, res) => {
-    this.model.find({}, (err, docs) => {
-      if (err) { return console.error(err); }
-      res.json(docs);
-    });
+    // this.model.find({}, (err, docs) => {
+    //   if (err) { return console.error(err); }
+    //   res.json(docs);
+    // });
+
+    res.json([
+      {
+        name:"enrollable", 
+        descripcion:"Esto es una prueba", 
+        galeria: [{foto: "../assets/img/bg2.jpeg"}, {foto: "../assets/img/bg3.jpeg"}, {foto: "../assets/img/bg4.jpeg"}]
+      }
+    ]);
   }
 
   // Count all
