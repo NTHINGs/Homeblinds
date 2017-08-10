@@ -33,9 +33,11 @@
     "bootstrap":"^3.3.7",
     "chartist": "~0.11.0",
     "core-js": "^2.5.0",
+    "classlist.js": "^1.1.20150312",
     "dotenv": "^4.0.0",
     "express": "^4.15.4",
     "font-awesome": "^4.7.0",
+    "intl": "^1.2.5",
     "jquery": "^3.2.1",
     "jsonwebtoken": "^7.4.2",
     "mongoose": "^4.11.6",
@@ -46,6 +48,7 @@
     "rxjs": "^5.4.2",
     "systemjs": "~0.20.17",
     "tether": "1.4.0",
+    "web-animations-js": "^2.3.1",
     "zone.js": "^0.8.16"
   },
   "devDependencies": {
