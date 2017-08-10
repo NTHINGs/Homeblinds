@@ -3,7 +3,6 @@ import { ROUTES } from './sidebar-routes.config';
 
 declare var $:any;
 @Component({
-    moduleId: module.id,
     selector: 'sidebar-cmp',
     templateUrl: 'sidebar.component.html',
 })
