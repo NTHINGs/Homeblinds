@@ -1,5 +1,5 @@
 import { Component, OnInit, trigger, state, style, transition, animate } from '@angular/core';
-import { Charts } from '../../../assets/js/charts';
+// import { Charts } from '../../../assets/js/charts';
 
 declare var $:any;
 
@@ -17,6 +17,6 @@ export class HomeComponent implements OnInit{
         //     var $checkbox = $(this);
         //     $checkbox.checkbox();
         // });
-        initDemo();
+        // initDemo();
     }
 }
