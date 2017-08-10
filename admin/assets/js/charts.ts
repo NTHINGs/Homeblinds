@@ -1,6 +1,5 @@
-if ('undefined' !== typeof module) {
-
-    module.exports = function initDemo(){
+export class Charts{
+    initDemo(){
         /* ----------==========     Daily Sales Chart initialization For Documentation    ==========---------- */
 
         dataDailySalesChart = {
@@ -75,11 +74,11 @@ if ('undefined' !== typeof module) {
         /* ----------==========     Emails Subscription Chart initialization    ==========---------- */
 
         var dataEmailsSubscriptionChart = {
-          labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-          series: [
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            series: [
             [542, 443, 320, 780, 553, 453, 326, 434, 568, 610, 756, 895]
 
-          ]
+            ]
         };
         var optionsEmailsSubscriptionChart = {
             axisX: {
@@ -90,14 +89,14 @@ if ('undefined' !== typeof module) {
             chartPadding: { top: 0, right: 5, bottom: 0, left: 0}
         };
         var responsiveOptions = [
-          ['screen and (max-width: 640px)', {
+            ['screen and (max-width: 640px)', {
             seriesBarDistance: 5,
             axisX: {
-              labelInterpolationFnc: function (value) {
+                labelInterpolationFnc: function (value) {
                 return value[0];
-              }
+                }
             }
-          }]
+            }]
         ];
         var emailsSubscriptionChart = Chartist.Bar('#emailsSubscriptionChart', dataEmailsSubscriptionChart, optionsEmailsSubscriptionChart, responsiveOptions);
 
