@@ -22,6 +22,7 @@
       "styles": [
         "styles.css",
         "../node_modules/bootstrap/dist/css/bootstrap.css",
+        "assets/css/material-kit.css",
         "assets/css/material-dashboard.css?v=1.2.0",
         "assets/css/demo.css"
       ],
@@ -35,6 +36,8 @@
         "assets/js/arrive.min.js",
         "assets/js/chartist.min.js",
         "assets/js/bootstrap-notify.js",
+        "assets/js/material-kit.js",
+        "assets/js/parallax.js",
         "assets/js/material-dashboard.js?v=1.2.0",
         "assets/js/demo.js",
         "assets/js/sidebar-moving-tab.js",
