@@ -9,8 +9,6 @@ import { LandPageComponent } from './land-page/land-page.component';
 import { LandPersianaComponent } from './land-persiana/land-persiana.component';
 import { ItemComponent } from './item/item.component';
 import { AdminComponent } from './admin/admin.component';
-import { DashboardComponent } from './admin/dashboard/dashboard.component';
-
 import { DashboardModule } from './admin/dashboard/dashboard.module';
 import { SidebarModule } from './admin/sidebar/sidebar.module';
 import { FooterModule } from './admin/shared/footer/footer.module';
@@ -27,7 +25,6 @@ import { PersianaService } from './services/persiana.service';
     LandPersianaComponent,
     ItemComponent,
     AdminComponent,
-    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +37,7 @@ import { PersianaService } from './services/persiana.service';
     RouterModule.forRoot([
       { path: '', redirectTo: 'landing', pathMatch: 'full' },
       { path: 'landing', component: AppComponent },
-      { path: 'admin', component: DashboardComponent }
+      { path: 'admin', component: AdminComponent }
     ])
   ],
   providers: [
