@@ -22,7 +22,6 @@
       "styles": [
         "styles.css",
         "../node_modules/bootstrap/dist/css/bootstrap.css",
-        "assets/css/material-kit.css",
         "assets/css/material-dashboard.css?v=1.2.0",
         "assets/css/demo.css"
       ],
