@@ -23,7 +23,8 @@
         "styles.css",
         "../node_modules/bootstrap/dist/css/bootstrap.css",
         "assets/css/material-dashboard.css?v=1.2.0",
-        "assets/css/demo.css"
+        "assets/css/demo.css",
+        "assets/sass/material-dashboard.scss"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.min.js",
