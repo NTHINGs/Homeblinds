@@ -30,10 +30,6 @@ db.once('open', () => {
     res.sendFile(path.join(__dirname, '../public/index.html'));
   });
 
-  app.get('/admin', function(req, res) {
-    res.sendFile(path.join(__dirname, '../admin/index.html'));
-  });
-
   app.listen(app.get('port'), () => {
     console.log('homeblinds listening on port ' + app.get('port'));
   });

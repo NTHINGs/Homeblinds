@@ -7,12 +7,12 @@
     "ng": "ng",
     "build": "ng build",
     "start": "node dist/server/app.js",
-    "dev": "concurrently \"mongod\" \"ng serve -pc proxy.conf.json --open\" \"tsc -w -p server\" \"nodemon dist/server/app.js\"",
+    "dev": "tsc -w -p server && nodemon dist/server/app.js && ng serve -pc proxy.conf.json --open",
     "prod": "ng build -aot -prod && tsc -p server && node dist/server/app.js",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --app client --target=development --environment=dev && ng build --app admin --target=development --environment=dev && tsc -p server"
+    "postinstall": "ng build --target=development --environment=dev && tsc -p server"
   },
   "private": true,
   "dependencies": {
