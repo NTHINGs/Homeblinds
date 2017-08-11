@@ -17,8 +17,7 @@ export const MODULE_ROUTES: Route[] =[
     { path: 'notifications', component: NotificationsComponent },
     { path: 'typography', component: TypographyComponent },
     { path: 'maps', component: MapsComponent },
-    { path: 'upgrade', component: UpgradeComponent },
-    { path: '', redirectTo: 'dashboard', pathMatch: 'full' }
+    { path: 'upgrade', component: UpgradeComponent }
 ]
 
 export const MODULE_COMPONENTS = [
