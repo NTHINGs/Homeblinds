@@ -25,9 +25,13 @@ db.once('open', () => {
   console.log('Connected to MongoDB');
 
   setRoutes(app);
-
+  
   app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, '../public/index.html'));
+  });
+
+  app.get('/06i9begyrqqcuo4wxnoqazxbm8u2a1.html', function(req, res) {
+    res.sendFile(path.join(__dirname, '../public/assets/06i9begyrqqcuo4wxnoqazxbm8u2a1.html'));
   });
 
   app.listen(app.get('port'), () => {
