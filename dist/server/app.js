@@ -22,6 +22,9 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function () {
     console.log('Connected to MongoDB');
     routes_1.default(app);
+    app.get('/06i9begyrqqcuo4wxnoqazxbm8u2a1.html', function (req, res) {
+        res.sendFile(path.join(__dirname, '../public/06i9begyrqqcuo4wxnoqazxbm8u2a1.html'));
+    });
     app.get('/', function (req, res) {
         res.sendFile(path.join(__dirname, '../public/index.html'));
     });
